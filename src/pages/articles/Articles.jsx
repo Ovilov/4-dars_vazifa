@@ -7,7 +7,7 @@ function Articles() {
     isPending,
     error,
   } = useFetch(
-    "https://online-json-server-api.up.railway.app/project/66788d2e1d2cd3eb1143fdf0/data/articles"
+    "https://online-json-server-api.up.railway.app/project/66788d2e1d2cd3eb1143fdf0/articles"
   );
   return (
     <div className="article-container">
@@ -15,7 +15,7 @@ function Articles() {
       {error && <h3>{error}</h3>}
 
       {articles &&
-        articles.map((article) => {
+        articles.data.map((article) => {
           return (
             <div className="card" key={article.id}>
               <h3>Title: {article.title}</h3>
