@@ -41,7 +41,7 @@ function App() {
   );
 
   return (
-    <div className="App">
+    <div className="App max-w-6xl m-auto  ">
       <RouterProvider router={routes} />
     </div>
   );
